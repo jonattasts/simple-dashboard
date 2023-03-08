@@ -28,10 +28,11 @@
 
   --padding-1: 1.2rem;
 
-  --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow-1: 0 2rem 3rem var(--color-light);
+  --box-shadow-2: 1rem 3rem 4rem var(--color-light);
+  --box-shadow-3: 0 1rem 1rem var(--color-light);
 
-  --transition-animation-1: all 300ms ease;
-  --transition-animation-2: translate(5px, 5px);
+  --transition-animation: all 300ms ease;
 }
 
 /*Custom scrollbar*/
@@ -149,7 +150,6 @@ aside {
 }
 
 aside .top {
-  background: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -164,12 +164,16 @@ aside .logo {
 aside .logo img {
   width: 2rem;
   height: 2rem;
+  margin-left: 1.8rem;
+}
+
+aside .close {
+  display: none;
 }
 
 /*========================== SIDE BAR ============================*/
 
 aside .sidebar {
-  background: var(--color-white);
   display: flex;
   flex-direction: column;
   height: 86vh;
@@ -189,12 +193,12 @@ aside .sidebar a {
   align-items: center;
   position: relative;
   height: 3.7rem;
-  transition: var(--transition-animation-1);
+  transition: var(--transition-animation);
 }
 
 aside .sidebar a span {
   font-size: 1.6rem;
-  transition: var(--transition-animation-1);
+  transition: var(--transition-animation);
 }
 
 aside .sidebar a:last-child {
@@ -219,7 +223,7 @@ aside .sidebar a.active::before {
 aside .sidebar a.active span {
   color: var(--color-primary);
   margin-left: calc(1rem - 3px);
-  transition: var(--transition-animation-1);
+  transition: var(--transition-animation);
 }
 
 aside .sidebar a:hover {
@@ -269,8 +273,8 @@ main .insights > div {
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
   margin-top: 1rem;
-  box-shadow: var(--box-shadow);
-  transition: var(--transition-animation-1);
+  box-shadow: var(--box-shadow-1);
+  transition: var(--transition-animation);
 }
 
 main .insights > div:hover {
@@ -321,7 +325,7 @@ main .insights svg circle {
   stroke: var(--color-primary);
   stroke-width: 14;
   stroke-linecap: round;
-  transform: var(--transition-animation-2);
+  transform: translate(5px, 5px);
   stroke-dasharray: 110;
   stroke-dashoffset: 92;
 }
@@ -373,7 +377,7 @@ table {
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
   text-align: center;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-1);
 }
 
 table:hover {
@@ -399,7 +403,7 @@ main .recent-orders a.show-all {
 }
 
 main .recent-orders a.show-all span {
-  transition: var(--transition-animation-1);
+  transition: var(--transition-animation);
 }
 
 main .recent-orders a.show-all span:hover {
@@ -481,8 +485,8 @@ main .recent-orders td.info > a > span {
   background: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition-animation-1);
+  box-shadow: var(--box-shadow-1);
+  transition: var(--transition-animation);
 }
 
 .right .recent-updates .updates:hover {
@@ -514,8 +518,8 @@ main .recent-orders td.info > a > span {
   margin-bottom: 0.7rem;
   padding: 1.4rem var(--card-padding);
   border-radius: var(--border-radius-3);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition-animation-1);
+  box-shadow: var(--box-shadow-1);
+  transition: var(--transition-animation);
 }
 
 .right .sales-analytics .item:hover {
@@ -557,12 +561,171 @@ main .recent-orders td.info > a > span {
 }
 
 .right .sales-analytics .add-product .content-product {
-display: flex;
-align-items: center;
-gap: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.right .sales-analytics .add-product .content-product h3{
+.right .sales-analytics .add-product .content-product h3 {
   font-weight: 600;
 }
 
+/*========================== MEDIA QUERIES ============================*/
+
+/*==== MAX-WIDTH 1200px ====*/
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+
+  aside .logo h2 {
+    display: none;
+  }
+
+  aside .sidebar h3 {
+    display: none;
+  }
+
+  aside .sidebar a {
+    width: 5.6rem;
+  }
+
+  aside .sidebar a:last-child {
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+  main .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  main .recent-orders {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 8.8rem;
+  }
+
+  main .recent-orders table {
+    width: 83.5vw;
+  }
+
+  main table thead tr th:first-child {
+    display: none;
+  }
+
+  main table tbody tr td:first-child {
+    display: none;
+  }
+}
+
+/*==== MAX-WIDTH 768px ====*/
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    position: fixed;
+    left: 0;
+    background: var(--color-white);
+    width: 18rem;
+    z-index: 3;
+    box-shadow: var(--box-shadow-2);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+  }
+
+  aside .logo {
+    margin-left: 1rem;
+  }
+
+  aside .logo h2 {
+    display: inline;
+  }
+
+  aside .sidebar h3 {
+    display: inline;
+  }
+
+  aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 5rem;
+    left: 0.3rem;
+  }
+
+  aside .close {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  main {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+  main .recent-orders {
+    position: relative;
+    margin: 3rem 0 0 0;
+    width: 100%;
+  }
+
+  main .recent-orders table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .right {
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
+
+  .right .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    background: var(--color-white);
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    box-shadow: var(--box-shadow-3);
+  }
+
+  .right .top .theme-toggler {
+    width: 4.4rem;
+    position: absolute;
+    left: 4rem;
+  }
+
+  .right .profile .info {
+    /* display: none; */
+  }
+
+  .right .top button {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-dark);
+    position: absolute;
+    left: 1rem;
+  }
+
+  .right .top button span {
+    font-size: 2rem;
+  }
+}
