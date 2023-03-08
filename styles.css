@@ -116,13 +116,6 @@ small {
   font-size: 0.75rem;
 }
 
-.profile-photo {
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
 .text-muted {
   color: var(--color-info-dark);
 }
@@ -464,6 +457,14 @@ main .recent-orders td.info > a > span {
   display: flex;
   gap: 2rem;
   text-align: right;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 /*========================== RECENT UPDATES ============================*/
