@@ -402,6 +402,15 @@ main .recent-orders a.show-all {
   display: block;
   margin: 1rem auto;
   color: var(--color-primary);
+  font-weight: 500;
+}
+
+main .recent-orders a.show-all span {
+  transition: var(--transition-animation-1);
+}
+
+main .recent-orders a.show-all span:hover {
+  margin-left: 1rem;
 }
 
 main .recent-orders td.info > a > span {
