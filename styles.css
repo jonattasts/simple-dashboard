@@ -726,7 +726,6 @@ main .recent-orders td.info > a > span {
     width: 100%;
     margin: 0;
     z-index: 2;
-    box-shadow: var(--box-shadow-3);
   }
 
   .right .top .theme-toggler {
