@@ -571,6 +571,11 @@ main .recent-orders td.info > a > span {
   cursor: pointer;
 }
 
+.right .sales-analytics .add-product:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
 .right .sales-analytics .add-product .content-product {
   display: flex;
   align-items: center;
