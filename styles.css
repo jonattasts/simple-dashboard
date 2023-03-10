@@ -277,6 +277,10 @@ main .date input[type="date"] {
   font-family: poppins, sans-serif;
 }
 
+main #monitoringChart {
+  margin: 1.4rem 0 1.4rem 0;
+}
+
 main .insights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
