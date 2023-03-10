@@ -8,14 +8,14 @@
   --color-danger: #ff7782;
   --color-success: #41f1b6;
   --color-warning: #ffbb55;
-  --color-white: #fff;
-  --color-background: #f6f6f9;
+  --color-white: #202528;
+  --color-background: #181a1e;
 
-  --color-dark: #363949;
-  --color-dark-variant: #677483;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
   --color-info-dark: #7d8da1;
 
-  --color-light: rgba(132, 139, 200, 0.18);
+  --color-light: rgba(0, 0, 0, 0.4);
   --color-info-light: #dce1eb;
 
   --card-border-radius: 2rem;
@@ -35,14 +35,14 @@
   --transition-animation: all 300ms ease;
 }
 
-/*==== DARK THEME VARIABLES ====*/
+/*==== LIGHT THEME VARIABLES ====*/
 
-.dark-theme {
-  --color-background: #181a1e;
-  --color-white: #202528;
-  --color-dark: #edeffd;
-  --color-dark-variant: #a3bdcc;
-  --color-light: rgba(0, 0, 0, 0.4);
+.light-theme {
+  --color-background: #f6f6f9;
+  --color-white: #fff;
+  --color-dark: #363949;
+  --color-dark-variant: #677483;
+  --color-light: rgba(132, 139, 200, 0.18);
   --box-shadow-1: 0 2rem 3rem var(--color-light);
 }
 
