@@ -1,6 +1,6 @@
 const sideMenu = document.querySelector("aside");
-const menuBtn = document.querySelector("#menu-btn");
-const closeBtn = document.querySelector("#close-btn");
+const menuBtn = document.querySelector("#menuBtn");
+const closeBtn = document.querySelector("#closeBtn");
 const themeToggler = document.querySelector(".theme-toggler");
 
 //Show Sidebar
@@ -42,5 +42,5 @@ Orders.forEach((order) => {
   `;
   
   tr.innerHTML = trContent;
-  document.querySelector("table tbody").appendChild(tr);
+  document.querySelector("table tbody#recentOrders").appendChild(tr);
 });
