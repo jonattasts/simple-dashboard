@@ -5,11 +5,12 @@
   --color-primary: #7380ec;
   --color-primary-variant: #111e88;
 
-  --color-danger: #ff7782;
-  --color-success: #41f1b6;
+  --color-danger: #85000b;
+  --color-success: #0ca27c;
   --color-warning: #ffbb55;
   --color-white: #202528;
   --color-background: #181a1e;
+  --color-icon: #fff;
 
   --color-dark: #edeffd;
   --color-dark-variant: #a3bdcc;
@@ -43,6 +44,9 @@
   --color-dark: #363949;
   --color-dark-variant: #677483;
   --color-light: rgba(132, 139, 200, 0.18);
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+
   --box-shadow-1: 0 2rem 3rem var(--color-light);
 }
 
@@ -292,11 +296,11 @@ main .insights > div:hover {
   box-shadow: none;
 }
 
-main .insights > div span {
+main .insights > div .icon {
   background: var(--color-primary);
   padding: 0.5rem;
   border-radius: var(--border-radius-4);
-  color: var(--color-white);
+  color: var(--color-icon);
   font-size: 2rem;
 }
 
@@ -539,7 +543,7 @@ main .recent-orders td.info > a > span {
 
 .right .sales-analytics .item .icon {
   padding: 0.6rem;
-  color: var(--color-white);
+  color: var(--color-icon);
   border-radius: 50%;
   background: var(--color-primary);
   display: flex;
