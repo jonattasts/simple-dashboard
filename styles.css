@@ -264,7 +264,8 @@ main {
 }
 
 main .date-range {
-  display: flex; justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 main .date {
@@ -276,6 +277,12 @@ main .date {
 }
 
 main .date input[type="month"] {
+  background: transparent;
+  color: var(--color-dark);
+  font-family: poppins, sans-serif;
+}
+
+main .date input[type="date"] {
   background: transparent;
   color: var(--color-dark);
   font-family: poppins, sans-serif;
