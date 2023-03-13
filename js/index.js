@@ -50,20 +50,20 @@ themeToggler.addEventListener("click", () => {
   themeToggler.querySelector("span:nth-child(2)").classList.toggle("active");
 });
 
-// Load orders on recent orders table
-Orders.forEach((order) => {
+// Load monitoring on recent monitoring table
+Monitorings.forEach((monitoring) => {
   const tr = document.createElement("tr");
-  const shippingColor =
-    order.shipping === "Recusado"
-      ? "danger"
-      : order.shipping === "Pendente"
-      ? "warning"
-      : "primary";
+  // const shippingColor =
+  //   monitoring.shipping === "Recusado"
+  //     ? "danger"
+  //     : monitoring.shipping === "Pendente"
+  //     ? "warning"
+  //     : "primary";
   const trContent = `
-    <td>${order.productName}</td>
-    <td>${order.productNumber}</td>
-    <td>${order.paymentStatus}</td>
-    <td class="${shippingColor}">${order.shipping}</td>
+    <td>${monitoring.system_specifications.hostname}</td>
+    <td>${monitoring.system_specifications.platform} ${monitoring.system_specifications["platform-release"]}</td>
+    <td>${monitoring.execution_time}</td>
+    <td class="">${monitoring.networking_info.ip_v4}</td>
     <td class="info">
       <a href="#">
         <span class="material-icons-sharp">info</span>
@@ -72,7 +72,7 @@ Orders.forEach((order) => {
   `;
 
   tr.innerHTML = trContent;
-  document.querySelector("table tbody#recentOrders").appendChild(tr);
+  document.querySelector("table tbody#recentMonitoring").appendChild(tr);
 });
 
 // Verify Browser type to render correct input date

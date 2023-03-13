@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       label: "Indice de Monitoramento",
       backgroundColor: "#7380ec",
       borderColor: "#7380ec",
-      data: [3, 5, 10, 7, 12, 15],
+      data: [3, 75, 65, 100, 120, 200],
     },
   ];
 

@@ -34,12 +34,12 @@
         </div>
 
         <div class="sidebar">
-          <a href="#">
+          <a href="/" class="active">
             <span class="material-icons-sharp">grid_view</span>
             <h3>Dashboard</h3>
           </a>
 
-          <a href="#" class="active">
+          <a href="#">
             <span class="material-icons-sharp">person_outline</span>
             <h3>Clientes</h3>
           </a>
@@ -103,102 +103,31 @@
 
         <canvas id="monitoringChart"></canvas>
 
-        <!-- ===========  INSIGHTS ============ -->
-        <div class="insights">
-          <!-- Sales -->
-          <div class="sales">
-            <span class="material-icons-sharp icon">analytics</span>
+        
 
-            <div class="content">
-              <div class="left">
-                <h3>Total de vendas</h3>
-                <h1>R$ 25,24</h1>
-              </div>
-
-              <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-
-                <div class="number">
-                  <p>81%</p>
-                </div>
-              </div>
-            </div>
-            <div class="text-muted">Últimas 24 horas</div>
-          </div>
-
-          <!-- Expenses -->
-          <div class="expenses">
-            <span class="material-icons-sharp icon">bar_chart</span>
-
-            <div class="content">
-              <div class="">
-                <h3>Total de despesas</h3>
-                <h1>R$ 14,14</h1>
-              </div>
-
-              <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-
-                <div class="number">
-                  <p>62%</p>
-                </div>
-              </div>
-            </div>
-            <div class="text-muted">Últimas 24 horas</div>
-          </div>
-
-          <!-- Incomes -->
-          <div class="income">
-            <span class="material-icons-sharp icon">stacked_line_chart</span>
-
-            <div class="content">
-              <div class="left">
-                <h3>Renda total</h3>
-                <h1>R$ 11,10</h1>
-              </div>
-
-              <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-
-                <div class="number">
-                  <p>44%</p>
-                </div>
-              </div>
-            </div>
-            <div class="text-muted">Últimas 24 horas</div>
-          </div>
-        </div>
-        <!-- INSIGHTS -->
-
-        <!-- ===========  RECENTS  ORDERS ============ -->
-        <div class="recent-orders">
-          <h2>Pedidos recentes</h2>
+        <!-- ===========  RECENTS MONITORING ============ -->
+        <div class="recent-monitoring">
+          <h2>Últimos monitoramentos</h2>
 
           <table>
             <thead>
               <tr>
                 <th>Nome</th>
-                <th>Número</th>
-                <th>Pagamento</th>
-                <th>Status</th>
+                <th>Sistema operacional</th>
+                <th>Hora de execução</th>
+                <th>IP</th>
                 <th></th>
               </tr>
             </thead>
 
-            <tbody id="recentOrders"></tbody>
+            <tbody id="recentMonitoring"></tbody>
           </table>
 
           <a href="#" class="show-all">
             <span>Ver todos</span>
           </a>
         </div>
-        <!-- RECENTS  ORDERS -->
+        <!-- RECENTS MONITORING -->
       </main>
 
       <div class="right">
@@ -233,12 +162,12 @@
           <div class="updates">
             <div class="update">
               <div class="profile-photo">
-                <img src="./assets/profile-2.jpg" alt="Profile" />
+                <img src="./assets/computer.png" alt="Profile" />
               </div>
 
               <div class="message">
                 <p>
-                  <b>Mike Tyson</b> recebeu este pedido de Smart Tech GPS Drone
+                  <b>SD-2812</b> enviou dados de monitoramento
                 </p>
 
                 <small class="text-muted">2 minutos atrás</small>
@@ -247,13 +176,12 @@
 
             <div class="update">
               <div class="profile-photo">
-                <img src="./assets/profile-3.jpg" alt="Profile" />
+                <img src="./assets/computer.png" alt="Profile" />
               </div>
 
               <div class="message">
                 <p>
-                  <b>Ashley Tompson</b> recebeu este pedido de Smart Tech GPS
-                  Drone
+                  <b>SD-2812</b> enviou dados de monitoramento
                 </p>
                 <small class="text-muted">3 minutos atrás</small>
               </div>
@@ -261,12 +189,12 @@
 
             <div class="update">
               <div class="profile-photo">
-                <img src="./assets/profile-4.jpg" alt="Profile" />
+                <img src="./assets/computer.png" alt="Profile" />
               </div>
 
               <div class="message">
                 <p>
-                  <b>Mia Tisdale</b> recebeu este pedido de Smart Tech GPS Drone
+                  <b>SD-2812</b> enviou dados de monitoramento
                 </p>
                 <small class="text-muted">4 minutos atrás</small>
               </div>
@@ -279,66 +207,67 @@
         <div class="sales-analytics">
           <h2>Análises de venda</h2>
 
-          <div class="item online">
+          <div class="item hardware">
             <div class="icon">
               <span class="material-icons-sharp">shopping_cart</span>
             </div>
 
             <div class="content">
               <div class="info">
-                <h3>Pedidos online</h3>
+                <h3>Hardware</h3>
                 <small class="text-muted">Últimas 24 horas</small>
               </div>
 
               <h5 class="success">+39%</h5>
-              <h3>3849</h3>
+              <h3>58</h3>
             </div>
           </div>
 
-          <div class="item offline">
+          <div class="item software">
             <div class="icon">
               <span class="material-icons-sharp">local_mall</span>
             </div>
 
             <div class="content">
               <div class="info">
-                <h3>Pedidos offline</h3>
+                <h3>Software</h3>
                 <small class="text-muted">Últimas 24 horas</small>
               </div>
 
               <h5 class="danger">-17%</h5>
-              <h3>1100</h3>
+              <h3>5</h3>
             </div>
           </div>
 
-          <div class="item customers">
+          <div class="item licenses">
             <div class="icon">
               <span class="material-icons-sharp">person</span>
             </div>
 
             <div class="content">
               <div class="info">
-                <h3>Novos clientes</h3>
+                <h3>Licenças</h3>
                 <small class="text-muted">Últimas 24 horas</small>
               </div>
 
               <h5 class="success">+25%</h5>
-              <h3>849</h3>
+              <h3>45</h3>
             </div>
           </div>
 
-          <div class="item add-product">
+          <!-- <div class="item add-product">
             <div class="content-product">
               <span class="material-icons-sharp">add</span>
               <h3>Adicionar produto</h3>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- SALES ANALYTICS -->
       </div>
     </div>
 
     <script src="./js/orders.js"></script>
+    <script src="./js/monitoring.js"></script>
     <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/graphic.js"></script>

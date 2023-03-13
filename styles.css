@@ -86,7 +86,7 @@ body {
   font-family: poppins, sans-serif;
   font-size: 0.88rem;
   background-color: var(--color-background);
-  user-select: none;
+  /* user-select: none; */
   color: var(--color-dark);
 }
 
@@ -290,6 +290,8 @@ main .date input[type="date"] {
 
 main #monitoringChart {
   margin: 1.4rem 0 1.4rem 0;
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
 main .insights {
@@ -393,11 +395,11 @@ main .insights small {
 
 /*========================== RECENT ORDERS ============================*/
 
-main .recent-orders {
+main .recent-monitoring {
   margin-top: 2rem;
 }
 
-main .recent-orders h2 {
+main .recent-monitoring h2 {
   margin-bottom: 0.8rem;
 }
 
@@ -424,7 +426,7 @@ table tbody tr:last-child td {
   border: none;
 }
 
-main .recent-orders a.show-all {
+main .recent-monitoring a.show-all {
   text-align: center;
   display: block;
   margin: 1rem auto;
@@ -432,15 +434,15 @@ main .recent-orders a.show-all {
   font-weight: 500;
 }
 
-main .recent-orders a.show-all span {
+main .recent-monitoring a.show-all span {
   transition: var(--transition-animation);
 }
 
-main .recent-orders a.show-all span:hover {
+main .recent-monitoring a.show-all span:hover {
   margin-left: 1rem;
 }
 
-main .recent-orders td.info > a > span {
+main .recent-monitoring td.info > a > span {
   text-align: center;
   color: var(--color-dark-variant);
 }
@@ -564,11 +566,11 @@ main .recent-orders td.info > a > span {
   display: flex;
 }
 
-.right .sales-analytics .item.online .icon {
+.right .sales-analytics .item.hardware .icon {
   background: var(--color-success);
 }
 
-.right .sales-analytics .item.offline .icon {
+.right .sales-analytics .item.software .icon {
   background: var(--color-danger);
 }
 
@@ -637,29 +639,29 @@ main .recent-orders td.info > a > span {
     gap: 0;
   }
 
-  main .recent-orders {
-    width: 82%;
-    position: absolute;
-    left: 18%;
-    transform: translateX(-3%);
+  main .recent-monitoring {
+    /* width: 82%; */
+    /* position: absolute; */
+    /* left: 18%; */
+    /* transform: translateX(-3%); */
   }
 
-  main .recent-orders table {
+  main .recent-monitoring table {
     width: 100%;
   }
 
-  main table thead tr th:first-child {
+  main table thead tr th:nth-child(2) {
     display: none;
   }
 
-  main table tbody tr td:first-child {
+  main table tbody tr td:nth-child(2) {
     display: none;
   }
 }
 
 /*==== MAX-WIDTH 768px ====*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
   .container {
     width: 100%;
     grid-template-columns: 1fr;
@@ -717,14 +719,14 @@ main .recent-orders td.info > a > span {
     padding: 0 1rem;
   }
 
-  main .recent-orders {
-    left: 3%;
+  main .recent-monitoring {
+    left: 1%;
     position: relative;
     margin: 3rem 0 0 0;
-    width: 100%;
+    width: 97%;
   }
 
-  main .recent-orders table {
+  main .recent-monitoring table {
     width: 100%;
     margin: 0;
   }
