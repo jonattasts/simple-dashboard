@@ -3,6 +3,7 @@ const menuBtn = document.querySelector("#menuBtn");
 const closeBtn = document.querySelector("#closeBtn");
 const themeToggler = document.querySelector(".theme-toggler");
 const sideBarItem = document.querySelector(".sidebar a");
+const returnToTop = document.getElementById("return-to-top");
 
 function getNameBrowser() {
   let browser = "";
@@ -66,6 +67,21 @@ document.addEventListener("DOMContentLoaded", () => {
     limitRangeDate.min = "2022-11-01";
     limitRangeDate.value = "2023-03-10";
   }
+});
+
+// Scroll to Top
+window.addEventListener("scroll", (event) => {
+  height = window.scrollY;
+
+  if (height >= 200) {
+    returnToTop.style.display = "block";
+  } else {
+    returnToTop.style.display = "none";
+  }
+});
+
+returnToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // window.addEventListener("resize", () => {

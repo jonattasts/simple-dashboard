@@ -161,6 +161,8 @@ b {
   color: var(--color-warning);
 }
 
+/*========================== SIDE BAR ============================*/
+
 aside {
   height: 100%;
 }
@@ -186,8 +188,6 @@ aside .logo img {
 aside .close {
   display: none;
 }
-
-/*========================== SIDE BAR ============================*/
 
 aside .sidebar {
   display: flex;
@@ -507,6 +507,42 @@ main .recent-monitoring td.info > a > span {
 
 .right .sales-analytics .add-product .content-product h3 {
   font-weight: 600;
+}
+
+/*========================== RETURN TO TOP ============================*/
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-primary);
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  user-select: none;
+  border-radius: 35px;
+  display: none;
+  transition: var(--transition-animation);
+  opacity: 0.5;
+}
+
+#return-to-top span {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 10px;
+  top: 10px;
+  text-align: center;
+  font-size: 30px;
+  transition: var(--transition-animation);
+}
+
+#return-to-top:hover {
+  opacity: 1;
+}
+
+#return-to-top:hover span {
+  color: #fff;
+  top: 5px;
 }
 
 /*========================== MEDIA QUERIES ============================*/
