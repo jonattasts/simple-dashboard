@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SysInvetory</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
+
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/monitoring.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ===========  SIDE BAR =========== -->
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./assets/logo.png" alt="" />
+            <h2>Sys<span class="danger">Invetory</span></h2>
+          </div>
+
+          <div class="close" id="closeBtn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="/">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3>Dashboard</h3>
+          </a>
+
+          <a href="./monitorings.html?m=SD-2812" class="active">
+            <span class="material-icons-sharp">data_usage</span>
+            <h3>Monitoramentos</h3>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp">receipt_long</span>
+            <h3>Análises</h3>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp">report_gmailerrorred</span>
+            <h3>Relatórios</h3>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp">settings</span>
+            <h3>Configurações</h3>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp">add</span>
+            <h3>Novo Cliente</h3>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp">logout</span>
+            <h3>Sair</h3>
+          </a>
+        </div>
+      </aside>
+      <!-- SIDE BAR -->
+
+      <main>
+        <h1>Monitoramentos</h1>
+
+        <!-- ===========  MONITORING CARDS =========== -->
+        <div class="monitoring-cards">
+          <!-- ====  Default card model with progress ==== -->
+          <!-- <div class="card">
+            <div class="header">
+              <img src="./assets/computer.png" alt="Item de monitoramento" />
+              <h2>SD-2812</h2>
+            </div>
+
+            <div class="content">
+              <div class="networking-info">
+                <h3>Rede</h3>
+                <p>
+                  <span>IP V4: </span>192.168.x.xxx<br />
+                  <span>MÁSCARA V4: </span>255.255.xxx.x<br />
+                  <span>IP V6: </span>fe80::f809:7b39:xxxx:xxxx<br />
+                  <span>MÁSCARA V6: </span>- <br />
+                  <span>BYTES ENVIADOS: </span>463.89MB<br />
+                  <span>BYTES RECEBIDOS: </span>3.64GB<br />
+                </p>
+              </div>
+
+              <div class="users">
+                <h3>Usuários</h3>
+
+                <div class="user">
+                  <div class="name">
+                    <span class="material-icons-sharp"> person_outline </span>
+                    <p>Jonatas</p>
+                  </div>
+
+                  <div class="time-boot">
+                    <span class="material-icons-sharp"> schedule </span>
+                    <p>06-03-2023 10:06:44</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="system-specifications">
+                <h3>Especificações do sistema</h3>
+                <p>
+                  <span>HOSTNAME: </span>SD-2812<br />
+                  <span>PROCESSADOR: </span>Intel64 Family 6 Model 58 Stepping
+                  9, GenuineIntel<br />
+                  <span>SISTEMA OPERACIONAL: </span>Windows 10<br />
+                  <span>RAM: </span>16GB<br />
+                  <span>DISCO RÍGIDO: </span>223.52GB<br />
+                  <span>ARQUITERURA: </span>AMD64<br />
+                </p>
+              </div>
+
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+
+                <div class="number">
+                  <p>81%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="time-execution primary">
+              <span class="material-icons-sharp">calendar_month</span>
+              09-03-2023 - 14:10:45
+            </div>
+          </div>-->
+          <!--Default card model with progress-->
+        </div>
+        <!-- MONITORING CARDS -->
+      </main>
+
+      <div class="right">
+        <!-- ===========  PROFILE AND THEME =========== -->
+        <div class="top">
+          <button id="menuBtn">
+            <span class="material-icons-sharp">menu</span>
+          </button>
+
+          <div class="theme-toggler">
+            <span class="material-icons-sharp"> light_mode </span>
+            <span class="material-icons-sharp active"> dark_mode </span>
+          </div>
+
+          <div class="profile">
+            <div class="info">
+              <p>Olá, <b>Jonatas</b></p>
+              <small class="text-muted">Admin</small>
+            </div>
+
+            <div class="profile-photo">
+              <img src="./assets/user.jpeg" alt="Profile" />
+            </div>
+          </div>
+        </div>
+        <!-- PROFILE AND THEME -->
+      </div>
+    </div>
+
+    <script src="./js/data-monitoring.js"></script>
+    <script src="./js/monitoring.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
