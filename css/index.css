@@ -39,7 +39,7 @@
 /*==== LIGHT THEME VARIABLES ====*/
 
 .light-theme {
-  --color-background: #f6f6f9;
+  --color-background: #ededef;
   --color-white: #fff;
   --color-dark: #363949;
   --color-dark-variant: #677483;
@@ -94,6 +94,7 @@ body {
   display: grid;
   width: 96%;
   margin: 0 auto;
+  padding: 1.4rem;
   gap: 1.8rem;
   grid-template-columns: 14rem auto 23rem;
 }
@@ -257,7 +258,7 @@ aside .sidebar .message-count {
   border-radius: var(--border-radius-1);
 }
 
-/*========================== PERCENTS CARDS ============================*/
+/*========================== DATE RANGE AND GRAPHIC ============================*/
 
 main {
   margin-top: 1.4rem;
@@ -266,13 +267,13 @@ main {
 main .date-range {
   display: flex;
   justify-content: space-between;
+  margin-top: 1.4rem;
 }
 
 main .date {
   display: inline-block;
   background: var(--color-light);
   border-radius: var(--border-radius-1);
-  margin-top: 1.4rem;
   padding: 0.5rem 1.6rem;
 }
 
@@ -292,105 +293,6 @@ main #monitoringChart {
   margin: 1.4rem 0 1.4rem 0;
   grid-template-columns: 1fr;
   gap: 0;
-}
-
-main .insights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
-}
-
-main .insights > div {
-  background: var(--color-white);
-  padding: var(--card-padding);
-  border-radius: var(--card-border-radius);
-  margin-top: 1rem;
-  box-shadow: var(--box-shadow-1);
-  transition: var(--transition-animation);
-}
-
-main .insights > div:hover {
-  box-shadow: none;
-}
-
-main .insights > div .icon {
-  background: var(--color-primary);
-  padding: 0.5rem;
-  border-radius: var(--border-radius-4);
-  color: var(--color-icon);
-  font-size: 2rem;
-}
-
-main .insights > div.expenses span {
-  background: var(--color-danger);
-}
-
-main .insights > div.income span {
-  background: var(--color-success);
-}
-
-main .insights > div .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-main .insights h3 {
-  margin: 1rem 0 0.6rem;
-  font-size: 1rem;
-}
-
-main .insights .progress {
-  position: relative;
-  width: 92px;
-  height: 92px;
-  border-radius: 50%;
-}
-
-main .insights svg {
-  width: 7rem;
-  height: 7rem;
-}
-
-main .insights svg circle {
-  fill: none;
-  stroke: var(--color-primary);
-  stroke-width: 14;
-  stroke-linecap: round;
-  transform: translate(5px, 5px);
-  stroke-dasharray: 110;
-  stroke-dashoffset: 92;
-}
-
-main .insights .sales svg circle {
-  stroke-dashoffset: -30;
-  stroke-dasharray: 200;
-}
-
-main .insights .expenses svg circle {
-  stroke-dashoffset: 20;
-  stroke-dasharray: 80;
-}
-
-main .insights .income svg circle {
-  stroke-dashoffset: 35;
-  stroke-dasharray: 110;
-}
-
-main .insights .progress .number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-main .insights small {
-  margin-top: 1.3rem;
-  display: block;
 }
 
 /*========================== RECENT ORDERS ============================*/
@@ -634,11 +536,6 @@ main .recent-monitoring td.info > a > span {
     margin-top: 1.8rem;
   }
 
-  main .insights {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
   main .recent-monitoring {
     /* width: 82%; */
     /* position: absolute; */
@@ -659,9 +556,13 @@ main .recent-monitoring td.info > a > span {
   }
 }
 
-/*==== MAX-WIDTH 768px ====*/
+/*==== MAX-WIDTH 920pxpx ====*/
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 936px) {
+  main .date input[type="month"],
+  main .date input[type="date"] {
+    width: 130px;
+  }
   .container {
     width: 100%;
     grid-template-columns: 1fr;
@@ -771,5 +672,12 @@ main .recent-monitoring td.info > a > span {
 
   .right .top button span {
     font-size: 2rem;
+  }
+}
+/*==== MAX-WIDTH 768px ====*/
+@media screen and (max-width: 768px) {
+  main .date input[type="month"],
+  main .date input[type="date"] {
+    width: 120px;
   }
 }

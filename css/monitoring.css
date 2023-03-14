@@ -1,0 +1,183 @@
+/*========================== MONITORING CARDS ============================*/
+
+main .monitoring-cards {
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem; */
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 1.4rem;
+  padding-bottom: 2rem;
+  cursor: pointer;
+  width: 75%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+main .monitoring-cards > div {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow-1);
+  transition: var(--transition-animation);
+}
+
+main .monitoring-cards > div:hover {
+  box-shadow: none;
+}
+
+main .monitoring-cards > div .icon {
+  background: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: var(--border-radius-4);
+  color: var(--color-icon);
+  font-size: 2rem;
+}
+
+main .monitoring-cards > div.expenses span {
+  background: var(--color-danger);
+}
+
+main .monitoring-cards > div.income span {
+  background: var(--color-success);
+}
+
+main .monitoring-cards .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+main .monitoring-cards .header > img {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+main .monitoring-cards h2 {
+  font-size: 1.7rem;
+}
+
+main .monitoring-cards h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1.3rem;
+}
+
+/*========================== CARD ============================*/
+
+main .monitoring-cards > .card {
+  margin-bottom: 1.4rem;
+}
+
+main .monitoring-cards > .card .content {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+main .monitoring-cards > .card .content div {
+  margin-right: 2.5rem;
+}
+
+main .monitoring-cards .card span.material-icons-sharp {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+main .monitoring-cards .card .content .users .user {
+  margin-bottom: 1rem;
+}
+
+main .monitoring-cards .card .content .users .user .name {
+  display: flex;
+  align-items: center;
+}
+
+main .monitoring-cards .card .content .users .user .time-boot {
+  display: flex;
+  align-items: center;
+}
+
+main .monitoring-cards .card .content p {
+  font-size: 1rem;
+}
+
+main .monitoring-cards .card .content p span {
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+main .monitoring-cards .card .progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+main .monitoring-cards .card svg {
+  width: 7rem;
+  height: 7rem;
+}
+
+main .monitoring-cards .card svg circle {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 110;
+  stroke-dashoffset: 92;
+}
+
+main .monitoring-cards .card svg circle {
+  stroke-dashoffset: -30;
+  stroke-dasharray: 200;
+}
+
+main .monitoring-cards .expenses svg circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 80;
+}
+
+main .monitoring-cards .income svg circle {
+  stroke-dashoffset: 35;
+  stroke-dasharray: 110;
+}
+
+main .monitoring-cards .card .progress .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .monitoring-cards .card .time-execution {
+  display: flex;
+  align-items: center;
+}
+
+/* TODO: MAKE ON RESPONSIBILITY*/
+/*========================== MEDIA QUERIES ============================*/
+
+/*==== MAX-WIDTH 920px ====*/
+@media screen and (max-width: 920px) {
+  main .monitoring-cards {
+    width: 93%;
+  }
+}
+
+/*==== MAX-WIDTH 768px ====*/
+@media screen and (max-width: 768px) {
+  main .monitoring-cards {
+    width: 85%;
+  }
+}

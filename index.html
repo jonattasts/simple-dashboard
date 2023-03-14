@@ -15,7 +15,7 @@
     />
 
     <!-- Custom styles -->
-    <link href="./styles.css" rel="stylesheet" />
+    <link href="./css/index.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -90,20 +90,31 @@
 
       <main>
         <h1>Dashboard</h1>
-
+        <!-- ===========  DATE RANGE ============ -->
         <div class="date-range">
           <div class="date">
-            <input id="initRangeDate" type="month" min="2022-10" value="2022-10" />
+            <input
+              id="initRangeDate"
+              type="month"
+              min="2022-10"
+              value="2022-10"
+            />
           </div>
 
           <div class="date">
-            <input id="limitRangeDate" type="month" min="2022-11" value="2023-03" />
+            <input
+              id="limitRangeDate"
+              type="month"
+              min="2022-11"
+              value="2023-03"
+            />
           </div>
         </div>
+        <!-- DATE RANGE -->
 
+        <!-- ===========  MONITORING INDEX ============ -->
         <canvas id="monitoringChart"></canvas>
-
-        
+        <!-- MONITORING INDEX -->
 
         <!-- ===========  RECENTS MONITORING ============ -->
         <div class="recent-monitoring">
@@ -266,10 +277,10 @@
       </div>
     </div>
 
-    <script src="./js/orders.js"></script>
-    <script src="./js/monitoring.js"></script>
-    <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/graphic.js"></script>
+    <script src="./js/data-monitoring.js"></script>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
