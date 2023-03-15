@@ -667,7 +667,6 @@ const Monitorings = [
     users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:04:51" }],
     execution_time: "14-03-2023 - 15:24:15",
   },
-
   {
     process_percents: [
       { name: "Code.exe", cpu_percent: "23.8%", memory_percent: "2.67%" },
@@ -996,7 +995,6 @@ const Monitorings = [
     users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:03:51" }],
     execution_time: "14-03-2023 - 15:25:32",
   },
-
   {
     process_percents: [
       { name: "Code.exe", cpu_percent: "15.5%", memory_percent: "1.6%" },
@@ -1325,7 +1323,6 @@ const Monitorings = [
     users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:02:51" }],
     execution_time: "14-03-2023 - 15:26:50",
   },
-
   {
     process_percents: [
       { name: "WD-TabNine.exe", cpu_percent: "4.6%", memory_percent: "0.14%" },
@@ -1654,7 +1651,6 @@ const Monitorings = [
     users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:01:11" }],
     execution_time: "14-03-2023 - 15:28:07",
   },
-
   {
     process_percents: [
       { name: "WD-TabNine.exe", cpu_percent: "5.5%", memory_percent: "0.14%" },
@@ -1983,7 +1979,6 @@ const Monitorings = [
     users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:15:51" }],
     execution_time: "14-03-2023 - 15:29:24",
   },
-
   {
     process_percents: [
       { name: "WD-TabNine.exe", cpu_percent: "4.8%", memory_percent: "0.14%" },
@@ -2312,7 +2307,6 @@ const Monitorings = [
     users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:25:51" }],
     execution_time: "14-03-2023 - 15:30:42",
   },
-
   {
     process_percents: [
       { name: "WD-TabNine.exe", cpu_percent: "4.8%", memory_percent: "0.14%" },
@@ -2623,7 +2617,7 @@ const Monitorings = [
       },
     ],
     system_specifications: {
-      hostname: "SD-2812",
+      hostname: "SD-2500",
       processor: "Intel64 Family 6 Model 58 Stepping 9, GenuineIntel",
       ram: "16GB",
       platform: "Windows",
@@ -2641,7 +2635,6 @@ const Monitorings = [
     users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:35:51" }],
     execution_time: "14-03-2023 - 15:31:59",
   },
-
   {
     process_percents: [
       { name: "WmiPrvSE.exe", cpu_percent: "10.1%", memory_percent: "0.12%" },
@@ -2952,7 +2945,7 @@ const Monitorings = [
       },
     ],
     system_specifications: {
-      hostname: "SD-2812",
+      hostname: "SD-2410",
       processor: "Intel64 Family 6 Model 58 Stepping 9, GenuineIntel",
       ram: "16GB",
       platform: "Windows",
@@ -2970,7 +2963,6 @@ const Monitorings = [
     users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:45:51" }],
     execution_time: "14-03-2023 - 15:33:16",
   },
-
   {
     process_percents: [
       { name: "WD-TabNine.exe", cpu_percent: "4.7%", memory_percent: "0.14%" },

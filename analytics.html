@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>SysInvetory</title>
+    <title>Sistema de Monitoramento</title>
     <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
 
     <!-- Material Icons -->
@@ -16,6 +16,7 @@
 
     <!-- Custom styles -->
     <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/analytics.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -34,7 +35,7 @@
         </div>
 
         <div class="sidebar">
-          <a href="/" class="active">
+          <a href="/">
             <span class="material-icons-sharp">grid_view</span>
             <h3>Dashboard</h3>
           </a>
@@ -44,16 +45,16 @@
             <h3>Monitoramentos</h3>
           </a>
 
-          <a href="./analytics.html">
+          <a href="./analytics.html" class="active">
             <span class="material-icons-sharp">receipt_long</span>
             <h3>Análises</h3>
           </a>
 
           <!-- <a href="#">
-            <span class="material-icons-sharp">mail_outline</span>
-            <h3>Mensagens</h3>
-            <span class="message-count">26</span>
-          </a> -->
+              <span class="material-icons-sharp">mail_outline</span>
+              <h3>Mensagens</h3>
+              <span class="message-count">26</span>
+            </a> -->
 
           <a href="#">
             <span class="material-icons-sharp">report_gmailerrorred</span>
@@ -80,6 +81,7 @@
 
       <main>
         <h1>Dashboard</h1>
+
         <!-- ===========  DATE RANGE ============ -->
         <div class="date-range">
           <div class="date">
@@ -102,33 +104,78 @@
         </div>
         <!-- DATE RANGE -->
 
-        <!-- ===========  MONITORING INDEX ============ -->
-        <canvas id="monitoringChart"></canvas>
-        <!-- MONITORING INDEX -->
+        <!-- ===========  INSIGHTS ============ -->
+        <div class="insights">
+          <!-- Sales -->
+          <div class="sales">
+            <span class="material-icons-sharp icon">analytics</span>
 
-        <!-- ===========  RECENTS MONITORING ============ -->
-        <div class="recent-monitoring">
-          <h2>Últimos monitoramentos</h2>
+            <div class="content">
+              <div class="left">
+                <h3>Total de vendas</h3>
+                <h1>R$ 25,24</h1>
+              </div>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Máquina</th>
-                <th>Sistema operacional</th>
-                <th>Hora de execução</th>
-                <th>IP</th>
-                <th></th>
-              </tr>
-            </thead>
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
 
-            <tbody id="recentMonitoring"></tbody>
-          </table>
+                <div class="number">
+                  <p>81%</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-muted">Últimas 24 horas</div>
+          </div>
 
-          <a href="#" class="show-all">
-            <span>Ver todos</span>
-          </a>
+          <!-- Expenses -->
+          <div class="expenses">
+            <span class="material-icons-sharp icon">bar_chart</span>
+
+            <div class="content">
+              <div class="">
+                <h3>Total de despesas</h3>
+                <h1>R$ 14,14</h1>
+              </div>
+
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+
+                <div class="number">
+                  <p>62%</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-muted">Últimas 24 horas</div>
+          </div>
+
+          <!-- Incomes -->
+          <div class="income">
+            <span class="material-icons-sharp icon">stacked_line_chart</span>
+
+            <div class="content">
+              <div class="left">
+                <h3>Renda total</h3>
+                <h1>R$ 11,10</h1>
+              </div>
+
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+
+                <div class="number">
+                  <p>44%</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-muted">Últimas 24 horas</div>
+          </div>
         </div>
-        <!-- RECENTS MONITORING -->
+        <!-- INSIGHTS -->
       </main>
 
       <div class="right">
@@ -150,7 +197,7 @@
             </div>
 
             <div class="profile-photo">
-              <img src="./assets/profile-1.jpg" alt="Profile" />
+              <img src="./assets/user.jpeg" alt="Profile" />
             </div>
           </div>
         </div>
@@ -179,7 +226,7 @@
               </div>
 
               <div class="message">
-                <p><b>SD-2410</b> enviou dados de monitoramento</p>
+                <p><b>SD-2812</b> enviou dados de monitoramento</p>
                 <small class="text-muted">3 minutos atrás</small>
               </div>
             </div>
@@ -190,67 +237,13 @@
               </div>
 
               <div class="message">
-                <p><b>SD-2500</b> enviou dados de monitoramento</p>
+                <p><b>SD-2812</b> enviou dados de monitoramento</p>
                 <small class="text-muted">4 minutos atrás</small>
               </div>
             </div>
           </div>
         </div>
         <!-- RECENT UPDATES -->
-
-        <!-- ===========  SALES ANALYTICS ============ -->
-        <div class="sales-analytics">
-          <h2>Análises de venda</h2>
-
-          <div class="item hardware">
-            <div class="icon">
-              <span class="material-icons-sharp">shopping_cart</span>
-            </div>
-
-            <div class="content">
-              <div class="info">
-                <h3>Hardware</h3>
-                <small class="text-muted">Últimas 24 horas</small>
-              </div>
-
-              <h5 class="success">+39%</h5>
-              <h3>58</h3>
-            </div>
-          </div>
-
-          <div class="item software">
-            <div class="icon">
-              <span class="material-icons-sharp">local_mall</span>
-            </div>
-
-            <div class="content">
-              <div class="info">
-                <h3>Software</h3>
-                <small class="text-muted">Últimas 24 horas</small>
-              </div>
-
-              <h5 class="danger">-17%</h5>
-              <h3>5</h3>
-            </div>
-          </div>
-
-          <div class="item licenses">
-            <div class="icon">
-              <span class="material-icons-sharp">person</span>
-            </div>
-
-            <div class="content">
-              <div class="info">
-                <h3>Licenças</h3>
-                <small class="text-muted">Últimas 24 horas</small>
-              </div>
-
-              <h5 class="success">+25%</h5>
-              <h3>45</h3>
-            </div>
-          </div>
-        </div>
-        <!-- SALES ANALYTICS -->
       </div>
     </div>
 
@@ -258,10 +251,8 @@
       <span class="material-icons-sharp"> expand_less </span>
     </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./js/graphic.js"></script>
     <script src="./js/data-monitoring.js"></script>
-    <script src="./js/dashboard.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/analytics.js"></script>
   </body>
 </html>
