@@ -80,58 +80,47 @@
       <!-- SIDE BAR -->
 
       <main>
+        <h1>SD-2812</h1>
         <h1>Dashboard</h1>
 
-        <!-- ===========  DATE RANGE ============ -->
-        <div class="date-range">
-          <div class="date">
-            <input
-              id="initRangeDate"
-              type="month"
-              min="2022-10"
-              value="2022-10"
-            />
-          </div>
-
-          <div class="date">
-            <input
-              id="limitRangeDate"
-              type="month"
-              min="2022-11"
-              value="2023-03"
-            />
-          </div>
+        <!-- ===========  DATE ============ -->
+        <div class="date">
+          <input id="initRangeDate" type="date" min="2022-10-01" />
         </div>
-        <!-- DATE RANGE -->
+
+        <!-- DATE -->
 
         <!-- ===========  INSIGHTS ============ -->
         <div class="insights">
           <!-- Sales -->
-          <div class="sales">
-            <span class="material-icons-sharp icon">analytics</span>
+          <div class="memory">
+            <div class="header">
+              <img src="./assets/memory-ram.png" alt="Item de monitoramento" />
+
+              <h2>Memória</h2>
+            </div>
 
             <div class="content">
-              <div class="left">
-                <h3>Total de vendas</h3>
-                <h1>R$ 25,24</h1>
-              </div>
+              <canvas
+                id="ram-percent"
+                style="max-width: 350px; margin: 0 -120px 0 -90px"
+              ></canvas>
 
-              <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
-
-                <div class="number">
-                  <p>81%</p>
-                </div>
-              </div>
+              <canvas
+                id="swap-percent"
+                style="max-width: 350px; margin-right: -120px"
+              ></canvas>
             </div>
-            <div class="text-muted">Últimas 24 horas</div>
+            <!-- <div class="text-muted">Últimas 24 horas</div> -->
           </div>
 
           <!-- Expenses -->
-          <div class="expenses">
-            <span class="material-icons-sharp icon">bar_chart</span>
+          <div class="cpu">
+            <div class="header">
+              <img src="./assets/cpu.png" alt="Item de monitoramento" />
+
+              <h2>CPU</h2>
+            </div>
 
             <div class="content">
               <div class="">
@@ -153,8 +142,12 @@
           </div>
 
           <!-- Incomes -->
-          <div class="income">
-            <span class="material-icons-sharp icon">stacked_line_chart</span>
+          <div class="process">
+            <div class="header">
+              <img src="./assets/process.png" alt="Item de monitoramento" />
+
+              <h2>Processos</h2>
+            </div>
 
             <div class="content">
               <div class="left">
@@ -252,7 +245,10 @@
     </a>
 
     <script src="./js/data-monitoring.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <script src="./js/graphics/graphic-analytics.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/analytics.js"></script>
   </body>
 </html>
