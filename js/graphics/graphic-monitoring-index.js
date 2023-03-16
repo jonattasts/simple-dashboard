@@ -1,5 +1,6 @@
-// Obtém o elemento canvas
-const graficoCanvas = document.getElementById("monitoringChart").getContext("2d");
+const graphicCanvas = document
+  .getElementById("monitoringChart")
+  .getContext("2d");
 
 document.addEventListener("DOMContentLoaded", () => {
   const labels = [
@@ -14,24 +15,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const datasets = [
     {
       label: "Indice de Monitoramento",
+      data: [3, 75, 65, 100, 120, 200],
       backgroundColor: "#7380ec",
       borderColor: "#7380ec",
-      data: [3, 75, 65, 100, 120, 200],
     },
   ];
 
-  // Define os dados do gráfico
-  const dados = {
+  const data = {
     labels: labels,
     datasets: datasets,
   };
 
-  // Configura o gráfico
   const config = {
     type: "line",
-    data: dados,
+    data: data,
   };
 
-  // Cria o gráfico
-  const myGraphic = new Chart(graficoCanvas, config);
+  const myGraphic = new Chart(graphicCanvas, config);
 });
