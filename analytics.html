@@ -81,7 +81,7 @@
 
       <main>
         <h1>SD-2812</h1>
-        <h1>Dashboard</h1>
+        <input type="text" name="" id="" value="SD-2812" />
 
         <!-- ===========  DATE ============ -->
         <div class="date">
@@ -93,7 +93,7 @@
         <!-- ===========  INSIGHTS ============ -->
         <div class="insights">
           <!-- Sales -->
-          <div class="memory">
+          <div class="card memory">
             <div class="header">
               <img src="./assets/memory-ram.png" alt="Item de monitoramento" />
 
@@ -101,21 +101,27 @@
             </div>
 
             <div class="content">
-              <canvas
-                id="ram-percent"
-                style="max-width: 350px; margin: 0 -120px 0 -90px"
-              ></canvas>
+              <div class="progress">
+                <canvas id="ram-percent"></canvas>
 
-              <canvas
-                id="swap-percent"
-                style="max-width: 350px; margin-right: -120px"
-              ></canvas>
+                <div class="number">
+                  <p>70%</p>
+                </div>
+              </div>
+
+              <div class="progress">
+                <canvas id="swap-percent"></canvas>
+
+                <div class="number">
+                  <p>30%</p>
+                </div>
+              </div>
             </div>
             <!-- <div class="text-muted">Últimas 24 horas</div> -->
           </div>
 
           <!-- Expenses -->
-          <div class="cpu">
+          <div class="card cpu">
             <div class="header">
               <img src="./assets/cpu.png" alt="Item de monitoramento" />
 
@@ -142,7 +148,7 @@
           </div>
 
           <!-- Incomes -->
-          <div class="process">
+          <div class="card process">
             <div class="header">
               <img src="./assets/process.png" alt="Item de monitoramento" />
 
@@ -246,8 +252,9 @@
 
     <script src="./js/data-monitoring.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    
     <script src="./js/graphics/graphic-analytics.js"></script>
     <script src="./js/index.js"></script>
   </body>

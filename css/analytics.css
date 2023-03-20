@@ -4,7 +4,7 @@ main .insights {
   gap: 1.6rem;
 }
 
-main .insights > div {
+main .insights > .card {
   background: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
@@ -13,7 +13,7 @@ main .insights > div {
   transition: var(--transition-animation);
 }
 
-main .insights > div:hover {
+main .insights > .card:hover {
   box-shadow: none;
 }
 
@@ -26,29 +26,7 @@ main .insights .header {
 main .insights .header > img {
   width: 3.6rem;
   height: 3.6rem;
-  /* border-radius: 50%; */
   margin-right: 1rem;
-}
-
-main .insights > div .icon {
-  background: var(--color-primary);
-  padding: 0.5rem;
-  border-radius: var(--border-radius-4);
-  color: var(--color-icon);
-  font-size: 2rem;
-}
-
-main .insights > div.expenses span {
-  background: var(--color-danger);
-}
-
-main .insights > div.income span {
-  background: var(--color-success);
-}
-
-main .insights > div .content {
-  display: flex;
-  align-items: center;
 }
 
 main .insights h3 {
@@ -56,58 +34,43 @@ main .insights h3 {
   font-size: 1rem;
 }
 
+main .insights > .card .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+main .insights .content .progress {
+  position: relative;
+  width: 250px;
+}
+
 main .insights .progress {
   position: relative;
   width: 92px;
   height: 92px;
-  border-radius: 50%;
 }
 
-main .insights svg {
-  width: 7rem;
-  height: 7rem;
-}
-
-main .insights svg circle {
-  fill: none;
-  stroke: var(--color-primary);
-  stroke-width: 14;
-  stroke-linecap: round;
-  transform: translate(5px, 5px);
-  /* 100% To decrease, change the value of stroke-dasharray */
-  stroke-dashoffset: 0;
-  stroke-dasharray: 0;
-}
-
-main .insights .memory svg circle {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 190;
-}
-
-main .insights .cpu svg circle {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 80;
-}
-
-main .insights .process svg circle {
-  stroke-dashoffset: 0;
-  stroke-dasharray: 140;
-}
-
-main .insights .progress .number {
+main .insights .content .progress .number {
   position: absolute;
-  top: 0;
+  top: 35px;
   left: 0;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 600;
 }
 
-main .insights small {
-  margin-top: 1.3rem;
-  display: block;
+main .insights .memory .progress:first-child {
+  margin-left: -40px;
+  margin-right: -70px;
+}
+
+main .insights .content .progress:nth-child(2) {
+  margin-right: -35px;
 }
 
 /*========================== MEDIA QUERIES ============================*/

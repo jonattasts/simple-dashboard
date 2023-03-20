@@ -6,50 +6,98 @@ const swapGraphicCanvas = document
   .getElementById("swap-percent")
   .getContext("2d");
 const themeTogglerElement = document.querySelector(".theme-toggler");
+
 let ramGraphic = null;
 let swapGraphic = null;
+
+const configOptions = {
+  plugins: {
+    datalabels: {
+      formatter: (value, context) => {
+        if (context.dataIndex === 0) {
+          let sum = context.dataset._meta[0].total;
+          let percentage = ((value * 100) / sum).toFixed(0) + "%";
+          return percentage;
+        } else return "";
+      },
+    },
+  },
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   const backgroundColors = ["#7380ec", "rgba(255, 255, 255, 0.1)"];
 
+  Chart.defaults.RoundedDoughnut = Chart.helpers.clone(Chart.defaults.doughnut);
+  Chart.controllers.RoundedDoughnut = Chart.controllers.doughnut.extend({
+    draw: function (ease) {
+      var ctx = this.chart.chart.ctx;
+
+      var easingDecimal = ease || 1;
+      Chart.helpers.each(this.getDataset().metaData, function (arc, index) {
+        arc.transition(easingDecimal).draw();
+
+        var vm = arc._view;
+        var radius = (vm.outerRadius + vm.innerRadius) / 2;
+        var thickness = (vm.outerRadius - vm.innerRadius) / 2;
+        var angle = Math.PI - vm.endAngle - Math.PI / 2;
+
+        ctx.save();
+        ctx.fillStyle = vm.backgroundColor;
+        ctx.translate(vm.x, vm.y);
+        ctx.beginPath();
+        ctx.arc(
+          radius * Math.sin(angle),
+          radius * Math.cos(angle),
+          thickness,
+          0,
+          2 * Math.PI
+        );
+        ctx.arc(
+          radius * Math.sin(Math.PI),
+          radius * Math.cos(Math.PI),
+          thickness,
+          0,
+          2 * Math.PI
+        );
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      });
+    },
+  });
+
   const configRam = {
-    type: "doughnut",
+    type: "RoundedDoughnut",
     data: {
       labels: ["RAM"],
       datasets: [
         {
           backgroundColor: backgroundColors,
-          borderColor: "transparent",
-          data: [70, 30],
           hoverBackgroundColor: backgroundColors,
+          borderColor: "transparent",
+          borderWidth: [0, 0],
+          borderRadius: Number.MAX_VALUE,
+          data: [70, 30],
         },
       ],
     },
     options: {
-      cutoutPercentage: 63,
+      cutoutPercentage: 82,
       legend: {
         display: true,
         labels: {
           fontColor: "#edeffd",
           fontSize: 13,
           boxWidth: 15,
-          pieceLabel: { mode: "percentage", render: "value" },
+          fontWeight: "bold",
         },
       },
       animation: {
-        animationRotate: true, // duration: 1000,
+        animationRotate: true,
+        duration: 1500,
       },
       tooltips: {
-        callbacks: {
-          label: function (tooltipItem, data) {
-            const label =
-              tooltipItem.index === 0 ? data.labels[tooltipItem.index] : "Free";
-
-            return (
-              label + " : " + data.datasets[0].data[tooltipItem.index] + " %"
-            );
-          },
-        },
+        enabled: false,
       },
       plugins: {
         datalabels: {
@@ -64,20 +112,22 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const configSwap = {
-    type: "doughnut",
+    type: "RoundedDoughnut",
     data: {
       labels: ["SWAP"],
       datasets: [
         {
           backgroundColor: backgroundColors,
-          borderColor: "transparent",
-          data: [30, 70],
           hoverBackgroundColor: backgroundColors,
+          borderColor: "transparent",
+          borderWidth: [0, 0],
+          borderRadius: Number.MAX_VALUE,
+          data: [30, 70],
         },
       ],
     },
     options: {
-      cutoutPercentage: 63,
+      cutoutPercentage: 82,
       legend: {
         display: true,
         labels: {
@@ -88,19 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
       animation: {
-        animationRotate: true, // duration: 1000,
+        animationRotate: true,
+        duration: 1500,
       },
       tooltips: {
-        callbacks: {
-          label: function (tooltipItem, data) {
-            const label =
-              tooltipItem.index === 0 ? data.labels[tooltipItem.index] : "Free";
-
-            return (
-              label + " : " + data.datasets[0].data[tooltipItem.index] + " %"
-            );
-          },
-        },
+        enabled: false,
       },
       plugins: {
         datalabels: {
@@ -109,20 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
             weight: "bold",
             size: 13,
           },
-        },
-      },
-    },
-  };
-
-  const configOptions = {
-    plugins: {
-      datalabels: {
-        formatter: (value, context) => {
-          if (context.dataIndex === 0) {
-            let sum = context.dataset._meta[0].total;
-            let percentage = ((value * 100) / sum).toFixed(0) + "%";
-            return percentage;
-          } else return "";
         },
       },
     },
