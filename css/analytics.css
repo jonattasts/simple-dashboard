@@ -38,7 +38,6 @@ main .insights > .card .content {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 1rem;
 }
 
 main .insights .content .progress {
@@ -71,6 +70,18 @@ main .insights .memory .progress:first-child {
 
 main .insights .content .progress:nth-child(2) {
   margin-right: -35px;
+}
+
+main .insights .memory .text-muted {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main .insights .memory .text-muted > span {
+  margin-right: 5px;
+  font-size: 18px;
 }
 
 /*========================== MEDIA QUERIES ============================*/
