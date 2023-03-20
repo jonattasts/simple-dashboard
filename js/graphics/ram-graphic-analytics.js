@@ -1,11 +1,11 @@
-// Obtém o elemento canvas
 const ramGraphicCanvas = document
   .getElementById("ram-percent")
   .getContext("2d");
 const swapGraphicCanvas = document
   .getElementById("swap-percent")
   .getContext("2d");
-const themeTogglerElement = document.querySelector(".theme-toggler");
+
+const themeToggler2 = document.querySelector(".theme-toggler");
 
 let ramGraphic = null;
 let swapGraphic = null;
@@ -24,6 +24,7 @@ const configOptions = {
   },
 };
 
+//Doughnut Graphic - MEMORY
 document.addEventListener("DOMContentLoaded", () => {
   const backgroundColors = ["#7380ec", "rgba(255, 255, 255, 0.1)"];
 
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  const configRam = {
+  const ramConfig = {
     type: "RoundedDoughnut",
     data: {
       labels: ["RAM"],
@@ -111,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  const configSwap = {
+  const swapConfig = {
     type: "RoundedDoughnut",
     data: {
       labels: ["SWAP"],
@@ -156,11 +157,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  ramGraphic = new Chart(ramGraphicCanvas, configRam);
-  swapGraphic = new Chart(swapGraphicCanvas, configSwap);
+  ramGraphic = new Chart(ramGraphicCanvas, ramConfig);
+  swapGraphic = new Chart(swapGraphicCanvas, swapConfig);
 });
 
-//Change graphic color by Theme
+//Change Doughnut graphic color by Theme
 themeTogglerElement.addEventListener("click", () => {
   const colorLegend = ramGraphic.options.legend.labels.fontColor;
   const colorLabelGraphic = ramGraphic.options.plugins.datalabels.color;
