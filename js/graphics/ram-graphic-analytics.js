@@ -28,47 +28,10 @@ const configOptions = {
 document.addEventListener("DOMContentLoaded", () => {
   const backgroundColors = ["#7380ec", "rgba(255, 255, 255, 0.1)"];
 
-  Chart.defaults.RoundedDoughnut = Chart.helpers.clone(Chart.defaults.doughnut);
-  Chart.controllers.RoundedDoughnut = Chart.controllers.doughnut.extend({
-    draw: function (ease) {
-      var ctx = this.chart.chart.ctx;
-
-      var easingDecimal = ease || 1;
-      Chart.helpers.each(this.getDataset().metaData, function (arc, index) {
-        arc.transition(easingDecimal).draw();
-
-        var vm = arc._view;
-        var radius = (vm.outerRadius + vm.innerRadius) / 2;
-        var thickness = (vm.outerRadius - vm.innerRadius) / 2;
-        var angle = Math.PI - vm.endAngle - Math.PI / 2;
-
-        ctx.save();
-        ctx.fillStyle = vm.backgroundColor;
-        ctx.translate(vm.x, vm.y);
-        ctx.beginPath();
-        ctx.arc(
-          radius * Math.sin(angle),
-          radius * Math.cos(angle),
-          thickness,
-          0,
-          2 * Math.PI
-        );
-        ctx.arc(
-          radius * Math.sin(Math.PI),
-          radius * Math.cos(Math.PI),
-          thickness,
-          0,
-          2 * Math.PI
-        );
-        ctx.closePath();
-        ctx.fill();
-        ctx.restore();
-      });
-    },
-  });
+  Chart.defaults.datasets.doughnut.cutout = "87%";
 
   const ramConfig = {
-    type: "RoundedDoughnut",
+    type: "doughnut",
     data: {
       labels: ["RAM"],
       datasets: [
@@ -83,37 +46,22 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     options: {
-      cutoutPercentage: 82,
-      legend: {
-        display: true,
-        labels: {
-          fontColor: "#edeffd",
-          fontSize: 13,
-          boxWidth: 15,
-          fontWeight: "bold",
-        },
-      },
+      legend: {},
       animation: {
         animationRotate: true,
         duration: 1500,
       },
-      tooltips: {
-        enabled: false,
-      },
       plugins: {
-        datalabels: {
-          color: "#edeffd",
-          font: {
-            weight: "bold",
-            size: 13,
-          },
+        datalabels: {},
+        tooltip: {
+          enabled: false,
         },
       },
     },
   };
 
   const swapConfig = {
-    type: "RoundedDoughnut",
+    type: "doughnut",
     data: {
       labels: ["SWAP"],
       datasets: [
@@ -128,30 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     options: {
-      cutoutPercentage: 82,
-      legend: {
-        display: true,
-        labels: {
-          fontColor: "#edeffd",
-          fontSize: 13,
-          boxWidth: 15,
-          fontWeight: "bold",
-        },
-      },
+      legend: {},
       animation: {
         animationRotate: true,
         duration: 1500,
       },
-      tooltips: {
-        enabled: false,
-      },
       plugins: {
-        datalabels: {
-          color: "#edeffd",
-          font: {
-            weight: "bold",
-            size: 13,
-          },
+        datalabels: {},
+        tooltip: {
+          enabled: false,
         },
       },
     },
@@ -162,27 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //Change Doughnut graphic color by Theme
-themeTogglerElement.addEventListener("click", () => {
-  const colorLegend = ramGraphic.options.legend.labels.fontColor;
-  const colorLabelGraphic = ramGraphic.options.plugins.datalabels.color;
+themeToggler2.addEventListener("click", () => {
+  const colorLegend = Chart.defaults.color;
   const colorDoughnut = ramGraphic.data.datasets[0].backgroundColor[1];
 
-  const colorLegendLight = "#edeffd";
+  const colorLegendLight = "#666";
   const colorLegendDark = "#363949";
   const doughnutLight = "rgba(0, 0, 0, 0.1)";
   const doughnutDark = "rgba(255, 255, 255, 0.1)";
 
-  //Change legend color
-  ramGraphic.options.legend.labels.fontColor =
-    colorLegend === colorLegendLight ? colorLegendDark : colorLegendLight;
-  swapGraphic.options.legend.labels.fontColor =
-    colorLegend === colorLegendLight ? colorLegendDark : colorLegendLight;
-
-  //Change graphic label color
-  ramGraphic.options.plugins.datalabels.color =
-    colorLabelGraphic === colorLegendLight ? colorLegendDark : colorLegendLight;
-  swapGraphic.options.plugins.datalabels.color =
-    colorLabelGraphic === colorLegendLight ? colorLegendDark : colorLegendLight;
+  // Change legend color
+  Chart.defaults.color =
+    colorLegend === colorLegendDark ? colorLegendLight : colorLegendDark;
 
   //Change graphic background color
   ramGraphic.data.datasets[0].backgroundColor[1] =
