@@ -1,3 +1,10 @@
+.container {
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 22rem;
+}
+
+/*========================== INSIGHTS ============================*/
+
 main .insights {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -38,22 +45,33 @@ main .insights > .card .content {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  max-height: 180px;
+  margin-bottom: 3rem;
 }
 
-main .insights .content .progress {
-  position: relative;
-  width: 250px;
+main .insights .card .text-muted {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main .insights .card .text-muted > span {
+  margin-right: 5px;
+  font-size: 18px;
 }
 
 main .insights .progress {
   position: relative;
-  width: 92px;
-  height: 92px;
 }
 
-main .insights .content .progress .number {
+main .insights .memory .content .progress {
+  width: 150px;
+}
+
+main .insights .memory .content .progress .number {
   position: absolute;
-  top: 35px;
+  top: 18px;
   left: 0;
   height: 100%;
   width: 100%;
@@ -63,25 +81,8 @@ main .insights .content .progress .number {
   font-weight: 600;
 }
 
-main .insights .memory .progress:first-child {
-  margin-left: -40px;
-  margin-right: -70px;
-}
-
-main .insights .content .progress:nth-child(2) {
-  margin-right: -35px;
-}
-
-main .insights .memory .text-muted {
-  margin-top: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-main .insights .memory .text-muted > span {
-  margin-right: 5px;
-  font-size: 18px;
+main .insights .cpu .content .progress {
+  width: 500px;
 }
 
 /*========================== MEDIA QUERIES ============================*/

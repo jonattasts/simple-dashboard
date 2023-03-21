@@ -2632,7 +2632,7 @@ const Monitorings = [
       bytes_sent: "473.34MB",
       bytes_recv: "3.05GB",
     },
-    users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:35:51" }],
+    users_info: [{ name: "Usuário", boot_time_user: "12-03-2023 12:35:51" }],
     execution_time: "14-03-2023 - 15:31:59",
   },
   {
@@ -2960,7 +2960,7 @@ const Monitorings = [
       bytes_sent: "473.37MB",
       bytes_recv: "3.05GB",
     },
-    users_info: [{ name: "Jonatas", boot_time_user: "12-03-2023 12:45:51" }],
+    users_info: [{ name: "Admin", boot_time_user: "12-03-2023 12:45:51" }],
     execution_time: "14-03-2023 - 15:33:16",
   },
   {
@@ -3290,7 +3290,7 @@ const Monitorings = [
     },
     users_info: [
       { name: "Jonatas", boot_time_user: "12-03-2023 12:55:51" },
-      { name: "Admin", boot_time_user: "12-03-2023 13:00:00" },
+      // { name: "Admin", boot_time_user: "12-03-2023 13:00:00" },
     ],
     execution_time: "14-03-2023 - 15:34:34",
   },
