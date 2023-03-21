@@ -5,18 +5,11 @@
   --color-primary: #7380ec;
   --color-primary-variant: #111e88;
 
-  --color-danger: #e70316;
-  --color-success: #0ca27c;
   --color-warning: #ffbb55;
-  --color-white: #202528;
-  --color-background: #181a1e;
   --color-icon: #fff;
 
-  --color-dark: #edeffd;
-  --color-dark-variant: #a3bdcc;
   --color-info-dark: #7d8da1;
 
-  --color-light: rgba(0, 0, 0, 0.4);
   --color-info-light: #dce1eb;
 
   --card-border-radius: 2rem;
@@ -34,6 +27,16 @@
   --box-shadow-3: 0 1rem 1rem var(--color-light);
 
   --transition-animation: all 300ms ease;
+
+  /*==== DARK THEME VARIABLES ====*/
+
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --color-danger: #e70316;
+  --color-success: #0ca27c;
 }
 
 /*==== LIGHT THEME VARIABLES ====*/
