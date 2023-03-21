@@ -220,12 +220,6 @@ aside .sidebar a span {
   transition: var(--transition-animation);
 }
 
-aside .sidebar a:last-child {
-  position: absolute;
-  bottom: 2rem;
-  width: 100%;
-}
-
 aside .sidebar a.active {
   background: var(--color-light);
   color: var(--color-primary);
@@ -631,7 +625,7 @@ main .recent-monitoring td.info > a > span {
   }
 
   aside .logo {
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   aside .logo h2 {
@@ -649,8 +643,8 @@ main .recent-monitoring td.info > a > span {
 
   aside .sidebar a:last-child {
     position: absolute;
-    bottom: 5rem;
-    left: 0.3rem;
+    bottom: 2rem;
+    width: 100%;
   }
 
   aside .close {
