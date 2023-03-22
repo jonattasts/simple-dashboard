@@ -46,12 +46,26 @@ main .search input {
   font-size: 18px;
 }
 
+/*========================== SYSTEM INFO ============================*/
+main .system-info {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+
+  margin-top: 1rem;
+}
+
+main .system-info .card .content {
+  display: block;
+  max-height: 100%;
+}
+
 /*========================== INSIGHTS ============================*/
 
 main .insights {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.6rem;
+  margin-top: 2rem;
 }
 
 main .card {
@@ -171,6 +185,14 @@ table tbody td {
 
 table tbody tr:last-child td {
   border: none;
+}
+
+table tbody tr:last-child td {
+  border: none;
+}
+
+table tbody tr:first-child td {
+  word-wrap: break-word;
 }
 
 main .process .card .content .progress {

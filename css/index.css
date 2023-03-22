@@ -584,11 +584,11 @@ main .recent-monitoring td.info > a > span {
     width: 100%;
   }
 
-  main table thead tr th:nth-child(2) {
+  main .recent-monitoring table thead tr th:nth-child(2) {
     display: none;
   }
 
-  main table tbody tr td:nth-child(2) {
+  main .recent-monitoring table tbody tr td:nth-child(2) {
     display: none;
   }
 }
