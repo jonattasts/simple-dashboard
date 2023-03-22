@@ -3198,7 +3198,11 @@ const Monitorings = [
         version: "3.70.0.0",
         installDate: "09-02-2023",
       },
-      { name: "OpenVPN Connect", version: "3.3.6", installDate: "06-02-2023" },
+      {
+        name: "OpenVPN Connect",
+        version: "3.3.6",
+        installDate: "06-02-2023",
+      },
       {
         name: "Cyber Protect Agent",
         version: "15.0.31529",
