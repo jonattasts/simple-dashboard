@@ -22,7 +22,7 @@ Monitorings.reverse().forEach((monitoring) => {
   });
 
   const cardContent = `
-    <div class="card">
+    <a href="./analytics.html?machine=${monitoring.system_specifications.hostname}" class="card">
         <div class="header">
             <img src="./assets/computer.png" alt="Item de monitoramento" />
             <h2>${monitoring.system_specifications.hostname}</h2>
@@ -42,7 +42,7 @@ Monitorings.reverse().forEach((monitoring) => {
             </div>
 
             <div class="users">
-                <h3>Usuários</h3>
+                <h3>Usuário</h3>
 
                 ${users}
             </div>
@@ -64,7 +64,7 @@ Monitorings.reverse().forEach((monitoring) => {
         <div class="time-execution primary">
             <span class="material-icons-sharp">calendar_month</span>${monitoring.execution_time}
         </div>
-    </div>`;
+    </a>`;
 
   card.innerHTML = cardContent;
   document.querySelector(".monitoring-cards").appendChild(card);
