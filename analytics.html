@@ -80,14 +80,24 @@
       <!-- SIDE BAR -->
 
       <main>
-        <h1>SD-2812</h1>
-        <input type="text" name="" id="" value="SD-2812" />
-
         <!-- ===========  DATE ============ -->
-        <div class="date">
-          <input id="initRangeDate" type="date" min="2022-10-01" />
+        <div class="search">
+          <div class="searchInput">
+            <input
+              id="searchMachine"
+              type="text"
+              value="SD-2812"
+              name="searchMachine"
+            />
+          </div>
+
+          <div class="searchButton">
+            <span class="material-icons-sharp">search</span>
+          </div>
         </div>
         <!-- DATE -->
+
+        <h1 class="title">SD-2812</h1>
 
         <!-- ===========  INSIGHTS RAM & CPU============ -->
         <div class="insights">
@@ -101,24 +111,24 @@
 
             <div class="content">
               <div class="row">
-              <div class="progress">
-                <canvas id="ram-percent"></canvas>
+                <div class="progress">
+                  <canvas id="ram-percent"></canvas>
 
-                <div class="number">
-                  <p>70%</p>
+                  <div class="number">
+                    <p>70%</p>
+                  </div>
+                </div>
+
+                <div class="progress">
+                  <canvas id="swap-percent"></canvas>
+
+                  <div class="number">
+                    <p>30%</p>
+                  </div>
                 </div>
               </div>
 
-              <div class="progress">
-                <canvas id="swap-percent"></canvas>
-
-                <div class="number">
-                  <p>30%</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-muted">
+              <div class="text-muted">
                 <span class="material-icons-sharp">event</span> 20/03/2023 -
                 15:36
               </div>
@@ -136,15 +146,15 @@
             <div class="content">
               <div class="progress">
                 <canvas id="cpu-percent"></canvas>
-                </div>
+              </div>
 
-            <div class="text-muted">
+              <div class="text-muted">
                 <span class="material-icons-sharp">event</span> 20/03/2023 -
                 15:36
               </div>
             </div>
-            </div>
           </div>
+        </div>
         <!-- INSIGHTS RAM & CPU -->
 
         <!-- ===========  PROCESS ============ -->
@@ -367,7 +377,7 @@
                         <div class="number">
                           <p>1.42%</p>
                         </div>
-              </div>
+                      </div>
                     </td>
                   </tr>
 
@@ -384,12 +394,12 @@
                       </div>
                     </td>
                     <td>
-              <div class="progress">
+                      <div class="progress">
                         <canvas id="process10-ram-percent"></canvas>
 
-                <div class="number">
+                        <div class="number">
                           <p>0.78%</p>
-                </div>
+                        </div>
                       </div>
                     </td>
                   </tr>
@@ -425,7 +435,7 @@
             </div>
 
             <div class="profile-photo">
-              <img src="./assets/profile-1.jpg" alt="Profile" />
+              <img src="./assets/user.jpeg" alt="Profile" />
             </div>
           </div>
         </div>
@@ -496,7 +506,7 @@
     <script src="./js/graphics/process/process8-graphic-analytics.js"></script>
     <script src="./js/graphics/process/process9-graphic-analytics.js"></script>
     <script src="./js/graphics/process/process10-graphic-analytics.js"></script>
-    
+
     <script src="./js/index.js"></script>
   </body>
 </html>

@@ -3,6 +3,49 @@
   grid-template-columns: 14rem auto 22rem;
 }
 
+/*========================== SEARCH MACHINE ============================*/
+
+main .search,
+main .title {
+  margin-left: 0.5rem;
+  text-align: center;
+}
+
+main .search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+main .searchInput,
+main .searchButton {
+  display: flex;
+  background: var(--color-light);
+  padding: 0.5rem 1.6rem;
+  height: 43px;
+  align-items: center;
+}
+
+main .searchInput {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+main .searchButton {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+main .search input {
+  background: transparent;
+  color: var(--color-dark);
+  font-family: poppins, sans-serif;
+  font-size: 18px;
+}
+
 /*========================== INSIGHTS ============================*/
 
 main .insights {
