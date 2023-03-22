@@ -55,7 +55,7 @@ Monitorings.reverse().forEach((monitoring) => {
                     <span>SISTEMA OPERACIONAL: </span>${monitoring.system_specifications.platform} ${monitoring.system_specifications["platform-release"]}
                     <br />
                     <span>RAM: </span>${monitoring.system_specifications.ram}<br />
-                    <span>DISCO RÍGIDO: </span>${monitoring.partitions[0].disk_usage_total}<br />
+                    <span>DISCO RÍGIDO: </span>${monitoring.partitions[0].hard_disk_total}<br />
                     <span>ARQUITERURA: </span>${monitoring.system_specifications.architecture}<br />
                 </p>
             </div>

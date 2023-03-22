@@ -297,13 +297,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.63GB",
@@ -313,7 +313,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -625,13 +625,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.63GB",
@@ -641,7 +641,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -953,13 +953,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.66GB",
@@ -969,7 +969,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -1281,13 +1281,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.66GB",
@@ -1297,7 +1297,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -1609,13 +1609,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.66GB",
@@ -1625,7 +1625,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -1937,13 +1937,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.66GB",
@@ -1953,7 +1953,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -2265,13 +2265,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.66GB",
@@ -2281,7 +2281,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -2593,13 +2593,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.66GB",
@@ -2609,7 +2609,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -2921,13 +2921,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.66GB",
@@ -2937,7 +2937,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",
@@ -3249,13 +3249,13 @@ const Monitorings = [
     ],
     partitions: [
       {
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
       },
       {
         name: "C:\\",
         type: "NTFS",
         disk_usage_percent: "64.3%",
-        disk_usage_total: "223.52GB",
+        hard_disk_total: "223.52GB",
         disk_usage_free: "79.84GB",
         disk_usage_used: "143.68GB",
         read_bytes: "60.66GB",
@@ -3265,7 +3265,7 @@ const Monitorings = [
         name: "D:\\",
         type: "cdrom",
         disk_usage_percent: "-",
-        disk_usage_total: "-",
+        hard_disk_total: "-",
         disk_usage_free: "-",
         disk_usage_used: "-",
         read_bytes: "0.0GB",

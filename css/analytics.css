@@ -7,6 +7,36 @@ main h2 {
   font-size: 1.5rem;
 }
 
+table {
+  background: transparent;
+  border-radius: 0;
+  padding: 0 2rem 0 2rem;
+  text-align: start;
+  box-shadow: none;
+}
+
+table th {
+  text-align: start;
+}
+
+table tbody td {
+  padding: 0.3rem 0 0.3rem 0;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+
+table tbody tr:last-child td {
+  border: none;
+}
+
+table tbody tr:last-child td {
+  border: none;
+}
+
+table tbody tr:first-child td {
+  word-wrap: break-word;
+}
+
 /*========================== SEARCH MACHINE ============================*/
 
 main .search,
@@ -56,6 +86,13 @@ main .system-info {
   grid-template-columns: repeat(1fr);
 
   margin-top: 1rem;
+}
+
+main .card .header span {
+  margin-left: 5px;
+  margin-top: 5px;
+  color: var(--color-dark-variant);
+  font-weight: bold;
 }
 
 main .system-info .card .content {
@@ -204,36 +241,6 @@ main .process .card .content {
   max-height: 100%;
 }
 
-table {
-  background: transparent;
-  border-radius: 0;
-  padding: 0 2rem 0 2rem;
-  text-align: start;
-  box-shadow: none;
-}
-
-table th {
-  text-align: start;
-}
-
-table tbody td {
-  padding: 0.3rem 0 0.3rem 0;
-  border-bottom: 1px solid var(--color-light);
-  color: var(--color-dark-variant);
-}
-
-table tbody tr:last-child td {
-  border: none;
-}
-
-table tbody tr:last-child td {
-  border: none;
-}
-
-table tbody tr:first-child td {
-  word-wrap: break-word;
-}
-
 main .process .card .content .progress {
   width: 45px;
   height: 45px;
@@ -256,6 +263,12 @@ main .process .card .content .progress .number {
   justify-content: center;
   font-weight: 600;
   font-size: 9px;
+}
+
+/*========================== DISK USAGE ============================*/
+
+.disk-usage {
+  margin-top: 3rem;
 }
 
 /*========================== MEDIA QUERIES ============================*/
