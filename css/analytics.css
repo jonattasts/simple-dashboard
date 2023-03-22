@@ -11,7 +11,7 @@ main .insights {
   gap: 1.6rem;
 }
 
-main .insights > .card {
+main .card {
   background: var(--color-white);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
@@ -20,17 +20,18 @@ main .insights > .card {
   transition: var(--transition-animation);
 }
 
-main .insights > .card:hover {
+main .card:hover {
   box-shadow: none;
 }
 
-main .insights .header {
+main .card .header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
-main .insights .header > img {
+main .card .header > img {
   width: 3.6rem;
   height: 3.6rem;
   margin-right: 1rem;
@@ -41,35 +42,43 @@ main .insights h3 {
   font-size: 1rem;
 }
 
-main .insights > .card .content {
+main .card .content {
+  max-height: 280px;
+}
+
+main .card .content .row {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  max-height: 180px;
-  margin-bottom: 3rem;
 }
 
-main .insights .card .text-muted {
+main .card .text-muted {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
+  margin-top: 2rem;
 }
 
-main .insights .card .text-muted > span {
+main .card .text-muted > span {
   margin-right: 5px;
   font-size: 18px;
 }
 
-main .insights .progress {
+main .memory .content {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .memory .progress {
   position: relative;
 }
 
-main .insights .memory .content .progress {
+main .memory .content .progress {
   width: 150px;
 }
 
-main .insights .memory .content .progress .number {
+main .memory .content .progress .number {
   position: absolute;
   top: 18px;
   left: 0;
@@ -81,8 +90,68 @@ main .insights .memory .content .progress .number {
   font-weight: 600;
 }
 
-main .insights .cpu .content .progress {
+main .cpu .content .progress {
   width: 500px;
+}
+
+/*========================== PROCESS ============================*/
+
+main .process {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+
+  margin-top: 2rem;
+}
+
+main .process .card .content {
+  display: block;
+  max-height: 100%;
+}
+
+table {
+  background: transparent;
+  border-radius: 0;
+  padding: 0 2rem 0 2rem;
+  text-align: start;
+  box-shadow: none;
+}
+
+table th {
+  text-align: start;
+}
+
+table tbody td {
+  padding: 0.3rem 0 0.3rem 0;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+
+table tbody tr:last-child td {
+  border: none;
+}
+
+main .process .card .content .progress {
+  width: 45px;
+  height: 45px;
+  margin-left: -10px;
+}
+
+main .process .card .content tbody tr td:last-child .progress {
+  width: 45px;
+  height: 45px;
+  margin-left: 8px;
+}
+
+main .process .card .content .progress .number {
+  position: relative;
+  top: -39px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 9px;
 }
 
 /*========================== MEDIA QUERIES ============================*/

@@ -87,10 +87,9 @@
         <div class="date">
           <input id="initRangeDate" type="date" min="2022-10-01" />
         </div>
-
         <!-- DATE -->
 
-        <!-- ===========  INSIGHTS ============ -->
+        <!-- ===========  INSIGHTS RAM & CPU============ -->
         <div class="insights">
           <!-- Memory -->
           <div class="card memory">
@@ -101,6 +100,7 @@
             </div>
 
             <div class="content">
+              <div class="row">
               <div class="progress">
                 <canvas id="ram-percent"></canvas>
 
@@ -119,7 +119,9 @@
             </div>
 
             <div class="text-muted">
-              <span class="material-icons-sharp">event</span> 20/03/2023 - 15:36
+                <span class="material-icons-sharp">event</span> 20/03/2023 -
+                15:36
+              </div>
             </div>
           </div>
 
@@ -135,15 +137,19 @@
               <div class="progress">
                 <canvas id="cpu-percent"></canvas>
                 </div>
-              </div>
 
             <div class="text-muted">
-              <span class="material-icons-sharp">event</span> 20/03/2023 - 15:36
+                <span class="material-icons-sharp">event</span> 20/03/2023 -
+                15:36
+              </div>
+            </div>
             </div>
           </div>
+        <!-- INSIGHTS RAM & CPU -->
 
-          <!-- Incomes -->
-          <div class="card process">
+        <!-- ===========  PROCESS ============ -->
+        <div class="process">
+          <div class="card">
             <div class="header">
               <img src="./assets/process.png" alt="Item de monitoramento" />
 
@@ -151,25 +157,253 @@
             </div>
 
             <div class="content">
-              <div class="left">
-                <h3>Renda total</h3>
-                <h1>R$ 11,10</h1>
-              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>CPU</th>
+                    <th>Memória</th>
+                  </tr>
+                </thead>
 
+                <tbody>
+                  <tr>
+                    <td>WD-TabNine.exe</td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process1-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>4.7%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process1-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.14%</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>aakore.exe</td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process2-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>4.0%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process2-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.19%</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Code.exe</td>
+
+                    <td>
+                      <div class="progress">
+                        <canvas id="process3-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>1.8%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process3-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>1.6%</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>python.exe</td>
+
+                    <td>
+                      <div class="progress">
+                        <canvas id="process4-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>1.3%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process4-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.12%</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>MmsMonitor.exe</td>
+
+                    <td>
+                      <div class="progress">
+                        <canvas id="process5-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>1.3%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process5-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.12%</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>MmsMonitor.exe</td>
+
+                    <td>
+                      <div class="progress">
+                        <canvas id="process6-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>1.1%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process6-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.22%</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>dwm.exe</td>
+
+                    <td>
+                      <div class="progress">
+                        <canvas id="process7-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.9%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process7-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.42%</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>DLPService.exe</td>
+
+                    <td>
+                      <div class="progress">
+                        <canvas id="process8-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.9%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process8-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.06%</p>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>MsMpEng.exe</td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process9-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.9%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="progress">
+                        <canvas id="process9-ram-percent"></canvas>
+
+                        <div class="number">
+                          <p>1.42%</p>
+                        </div>
+              </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Code.exe</td>
+
+                    <td>
+                      <div class="progress">
+                        <canvas id="process10-cpu-percent"></canvas>
+
+                        <div class="number">
+                          <p>0.8%</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
               <div class="progress">
-                <svg>
-                  <circle cx="38" cy="38" r="36"></circle>
-                </svg>
+                        <canvas id="process10-ram-percent"></canvas>
 
                 <div class="number">
-                  <p>44%</p>
+                          <p>0.78%</p>
                 </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="text-muted">
+                <span class="material-icons-sharp">event</span> 20/03/2023 -
+                15:36
               </div>
             </div>
-            <div class="text-muted">Últimas 24 horas</div>
           </div>
         </div>
-        <!-- INSIGHTS -->
+        <!-- Process -->
       </main>
 
       <div class="right">
@@ -252,6 +486,16 @@
 
     <script src="./js/graphics/ram-graphic-analytics.js"></script>
     <script src="./js/graphics/cpu-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process1-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process2-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process3-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process4-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process5-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process6-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process7-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process8-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process9-graphic-analytics.js"></script>
+    <script src="./js/graphics/process/process10-graphic-analytics.js"></script>
     
     <script src="./js/index.js"></script>
   </body>
