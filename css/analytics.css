@@ -276,6 +276,10 @@ main .disk-usage .card .content {
   max-height: 100%;
 }
 
+main .installed-software {
+  margin-top: 3rem;
+}
+
 main .installed-software .card .content {
   display: block;
   max-height: 100%;
