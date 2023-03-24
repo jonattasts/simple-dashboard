@@ -13,7 +13,7 @@ Monitorings.reverse().forEach((monitoring) => {
       <td>${monitoring.execution_time}</td>
       <td class="">${monitoring.networking_info.ip_v4}</td>
       <td class="info">
-        <a href="#">
+        <a href="./analytics.html?machine=${monitoring.system_specifications.hostname}">
           <span class="material-icons-sharp">info</span>
         </a>
       </td>
