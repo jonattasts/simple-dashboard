@@ -164,6 +164,10 @@ b {
   color: var(--color-warning);
 }
 
+.d-none {
+  display: none !important;
+}
+
 /*========================== SIDE BAR ============================*/
 
 aside {
