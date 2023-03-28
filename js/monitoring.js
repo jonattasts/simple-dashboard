@@ -40,13 +40,7 @@ Monitorings.reverse().forEach((monitoring) => {
                     <span>BYTES RECEBIDOS: </span>${monitoring.networking_info.bytes_recv}<br />
                 </p>
             </div>
-
-            <div class="users">
-                <h3>Usuário</h3>
-
-                ${users}
-            </div>
-
+            
             <div class="system-specifications">
                 <h3>Especificações do sistema</h3>
                 <p>
@@ -58,6 +52,12 @@ Monitorings.reverse().forEach((monitoring) => {
                     <span>DISCO RÍGIDO: </span>${monitoring.partitions[0].hard_disk_total}<br />
                     <span>ARQUITERURA: </span>${monitoring.system_specifications.architecture}<br />
                 </p>
+            </div>
+
+            <div class="users">
+                <h3>Usuário</h3>
+
+                ${users}
             </div>
         </div>
 
