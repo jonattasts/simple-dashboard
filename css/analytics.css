@@ -80,8 +80,9 @@ main .search input {
   font-size: 18px;
 }
 
-/*========================== SYSTEM INFO ============================*/
-main .system-info {
+/*========================== SYSTEM INFO AND LOCATION ============================*/
+main .system-info,
+main .location {
   display: grid;
   grid-template-columns: repeat(1fr);
 
@@ -95,12 +96,14 @@ main .card .header span {
   font-weight: bold;
 }
 
-main .system-info .card .content {
+main .system-info .card .content,
+main .location .card .content {
   display: block;
   max-height: 100%;
 }
 
-main .system-info .card .content .informations {
+main .system-info .card .content .informations,
+main .location .card .content .informations {
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -116,23 +119,44 @@ main .system-info .card span.material-icons-sharp {
   margin-right: 0.5rem;
 }
 
-main .system-info .card .content p {
+main .system-info .card .content p,
+main .location .card .content p {
   font-size: 1rem;
 }
 
-main .system-info .card .content .specifications p {
+main .system-info .card .content .specifications p,
+main .location .card .content .specifications p {
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
 
-main .system-info .card .content p span {
+main .system-info .card .content p span,
+main .location .card .content p span {
   font-weight: 500;
   color: var(--color-dark);
 }
 
-main .system-info h3 {
+main .location .card .content .informations .geolocation .country p span {
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+main .system-info h3,
+main .location h3 {
   margin: 1rem 0 0.6rem;
   font-size: 1.2rem;
+}
+
+main .location .card .content .informations .geolocation .country {
+  display: flex;
+  flex-direction: row;
+}
+
+main .location .card .content .informations .geolocation .country img {
+  height: 1.2rem;
+  width: 1.2rem;
+  object-fit: contain;
+  margin-left: 0.5rem;
 }
 
 /*========================== INSIGHTS ============================*/
