@@ -159,6 +159,15 @@ main .location .card .content .informations .geolocation .country img {
   margin-left: 0.5rem;
 }
 
+main .location .card .content .maps {
+  margin-top: 1.5rem;
+}
+
+main .location .card .content .maps img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 /*========================== INSIGHTS ============================*/
 
 main .insights {
