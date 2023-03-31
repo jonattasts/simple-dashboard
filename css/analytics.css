@@ -159,13 +159,10 @@ main .location .card .content .informations .geolocation .country img {
   margin-left: 0.5rem;
 }
 
-main .location .card .content .maps {
-  margin-top: 1.5rem;
-}
-
 main .location .card .content .maps img {
   object-fit: cover;
   border-radius: 10px;
+  margin-top: 1.5rem;
 }
 
 /*========================== INSIGHTS ============================*/
@@ -309,6 +306,8 @@ main .disk-usage .card .content {
   max-height: 100%;
 }
 
+/*========================== INSTALLED SOFTWARE ============================*/
+
 main .installed-software {
   margin-top: 3rem;
 }
@@ -317,8 +316,6 @@ main .installed-software .card .content {
   display: block;
   max-height: 100%;
 }
-
-/*========================== INSTALLED SOFTWARES ============================*/
 
 /*========================== MEDIA QUERIES ============================*/
 
